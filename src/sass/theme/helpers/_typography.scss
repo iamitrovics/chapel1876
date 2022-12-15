@@ -1,0 +1,128 @@
+// Import fonts and fonts variables
+
+// Import fonts
+@font-face {
+    font-family: 'Montserrat-Italic';
+    src: url('../fonts/subset-Montserrat-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('../fonts/subset-Montserrat-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../fonts/subset-Montserrat-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('../fonts/subset-Montserrat-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Regular';
+    src: url('../fonts/subset-PlayfairDisplay-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-SemiBold';
+    src: url('../fonts/subset-PlayfairDisplay-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font-main:'Montserrat-Regular';
+$font-semi: 'Montserrat-SemiBold';
+$font-med:'Montserrat-Medium';
+$font-heading:'PlayfairDisplay-Regular';
+$font-heading-semi:'PlayfairDisplay-SemiBold';
+$font-italic:'Montserrat-Italic';
+
+body { 
+	font: {
+		size:$base-size;
+		family: $font-main;
+	}
+	-webkit-text-size-adjust: 100%;  //fix for iOS
+	overflow-x:hidden;    
+}
+
+p {
+    font-size: 20px;
+    letter-spacing: normal;
+    line-height: 1.7;
+    color:#000;
+    margin-bottom: 0px;
+    @media only screen and (min-width: 992px) and (max-width: 1199.98px)  {
+        font-size: 18px;
+        line-height: 1.5;
+    }    
+    @media only screen and (min-width: 768px) and (max-width: 991.98px)  { 
+        font-size: 17px;
+        line-height: 1.5;
+    }  
+    @media screen and (max-width:767px) {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    a {
+        color:$color-purple-dark;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+            color:$color-purple;
+        }
+    }
+}
+
+ul {
+    margin:0px;
+    padding:0px;
+    list-style-type: none;
+}
+
+small {
+    font-size: 0.875em;
+}
+
+address {
+    padding:0px;
+    margin:0px;
+}
+
+a {
+    @include animate-fade;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    font-family: $font-heading;
+    font-weight: 400;
+}
+
+img {
+	height: auto;
+    display: block;
+}

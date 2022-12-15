@@ -1,0 +1,665 @@
+// Hero Banner
+#hero-banner {
+    margin-top: 140px;
+    position: relative;
+    @include breakpoint(laptop) {
+        margin-top: 120px;
+    }
+    @include breakpoint(tablet) {
+        margin-top: 100px;
+    }
+    @include breakpoint(mobile-all) {
+        margin-top: 80px;
+    }
+    // caption
+    .hero-caption {
+        text-align: center;
+        @include centre(both);
+        width: 90%;
+        img {
+            width: 400px;
+            display: block;
+            margin:0px auto;
+            margin-bottom: 60px;
+            @include breakpoint(laptop) {
+                margin-bottom: 40px;
+                width: 350px;
+            }
+            @include breakpoint(tablet) {
+                margin-bottom: 35px;
+                width: 300px;
+            }
+            @include breakpoint(mobile-all) {
+                margin-bottom: 30px;
+                width: 250px;
+            }
+        }
+        h1 {
+            color:$white;
+            font-size: 48px;
+            @include breakpoint(laptop) {
+                font-size: 42px;
+            }
+            @include breakpoint(tablet) {
+                font-size: 40px;
+            }
+            @include breakpoint(mobile-all) {
+                font-size: 32px;
+            }
+        }
+    }
+    // slider
+    #hero-slider {
+        .hero-slide {
+            height: 100%;
+            position: relative;
+            .overlay {
+                @include overlay;
+                background: rgba(#252525, 0.55);
+            }
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 800px;
+                display: block;
+                @include breakpoint(laptop) {
+                    height: 650px;
+                }
+                @include breakpoint(tablet) {
+                    height: 600px;
+                }
+                @include breakpoint(mobile-all) {
+                    height: 500px;
+                }
+            }
+        }
+    }
+}
+
+// Intro
+#intro {
+    text-align: center;
+    background: $color-pale;
+    padding-top: 120px;
+    padding-bottom: 200px;
+    position: relative;
+    @include breakpoint(laptop) {
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+    @include breakpoint(tablet) {
+        padding-top: 80px;
+        padding-bottom: 140px;
+    }
+    @include breakpoint(mobile-all) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .shape-bottom {
+        position: absolute;
+        left:0px;
+        bottom:0px;
+        z-index:1;
+        @include breakpoint(laptop) {
+            opacity: 0.8;
+        }
+        @include breakpoint(tablet) {
+            opacity: 0.6;
+        }
+        @include breakpoint(mobile-all) {
+            width: 80%;
+            opacity: 0.7;
+        }
+    }
+    .container {
+        max-width: 900px;
+        position: relative;
+        z-index:30;
+        @include breakpoint(laptop) {
+            max-width: 800px
+        }
+        @include breakpoint(tablet) {
+            max-width: 600px
+        }
+        h2 {
+            @include section-title;
+        }
+        p {
+            @include intro-text;
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+// Featured
+#featured {
+    background: $white;
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 90%;
+        position: relative;
+        z-index:10;
+        @include breakpoint(laptop) {
+            max-width: 100%;
+        }
+        @include breakpoint(tablet) {
+            display: block;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        @include breakpoint(mobile-all) {
+            display: block;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .top-shape {
+            position: absolute;
+            top:0px;
+            right:100px;
+            z-index: -1;
+            @include breakpoint(tablet) {
+                display: none;
+            }
+            @include breakpoint(mobile-all) {
+                display: none;
+            }
+        }
+        .content-block {
+            width: 300px;
+            text-align: center;
+            @include breakpoint(laptop) {
+                width: 30%;
+            }
+            @include breakpoint(tablet) {
+                width: 100%;
+                text-align: center;
+            }
+            @include breakpoint(mobile-all) {
+                width: 100%;
+            }
+            p {
+                font-family: $font-italic;
+                font-size: 17px;
+                @include breakpoint(desktop) {
+                    font-size: 16px;
+                }
+                @include breakpoint(laptop) {
+                    font-size: 15px;
+                }
+            }
+        }
+        .featured-image {
+            width: 650px;
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-top: -100px;
+            @include breakpoint(desktop) {
+                width: 55%;
+            }
+            @include breakpoint(laptop) {
+                width: 40%;
+            }
+            @include breakpoint(tablet) {
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            @include breakpoint(mobile-all) {
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            img {
+                width: 100%;
+                display: block;
+                object-fit: cover;
+                @include breakpoint(laptop) {
+                    height: 480px;
+                }
+                @include breakpoint(mobile-all) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Gallery
+#gallery {
+    margin-top: 60px;
+    @include breakpoint(mobile-all) {
+        margin-top: 30px;
+    }
+    &.gallery-inner {
+        margin-bottom: 100px;
+        @include breakpoint(mobile-all) {
+            margin-bottom: 50px;
+        }
+    }
+    .container {
+        max-width: 95%;
+        @include breakpoint(mobile-all) {
+            max-width: 100%;
+        }
+        .image-holder {
+            @include breakpoint(mobile-all) {
+                margin-bottom: 15px;
+            }
+            img {
+                width: 100%;
+                display: block;
+                object-fit: cover;
+                height: 370px;
+                @include breakpoint(laptop) {
+                    height: 300px;
+                }
+                @include breakpoint(tablet) {
+                    height: 250px;
+                }
+                @include breakpoint(mobile-all) {
+                    height: 300px;
+                }
+            }
+        }
+    }
+    footer {
+        padding-top: 60px;
+        text-align: center;
+        padding-bottom: 140px;
+        @include breakpoint(laptop) {
+            padding-bottom: 100px;
+        }
+        @include breakpoint(tablet) {
+            padding-top: 40px;
+            padding-bottom: 100px;
+        }
+        @include breakpoint(mobile-all) {
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+        a.btn-cta {
+            @include btn-cta;
+        }
+    }
+}
+
+// About
+#about {
+    padding-bottom: 200px;
+    @include breakpoint(laptop) {
+        padding-bottom: 150px;
+    }
+    @include breakpoint(tablet) {
+        padding-bottom: 100px;
+    }
+    @include breakpoint(mobile-all) {
+        padding-bottom: 50px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint(mobile-all) {
+            display: block;
+        }
+    }
+    // text
+    .about-text {
+        width:45%;
+        @include breakpoint(laptop) {
+            width: 50%;
+        }
+        @include breakpoint(tablet) {
+            width: 50%;
+        }
+        @include breakpoint(mobile-all) {
+            width: 100%;
+        }
+        h2  {
+            @include block-title;
+        }
+        p {
+            @include regular-text;
+            padding-right: 30px;
+        }
+        a.btn-cta {
+            @include btn-cta;
+            margin-top: 30px;
+            @include breakpoint(laptop) {
+                margin-top: 20px;
+            }
+            @include breakpoint(tablet) {
+                margin-top: 20px;
+            }
+        }
+    }
+    .about-image {
+        width: 45%;
+        position: relative;
+        @include breakpoint(tablet) {
+            width: 50%;
+        }
+        @include breakpoint(mobile-all) {
+            width: 100%;
+            margin-top: 30px;
+        }
+        .top-shape {
+            position: absolute;
+            left:-50px;
+            top:-50px;
+            background: #f0eff6;
+            width: 90px;
+            height: 410px;
+            display: block;
+            @include breakpoint(tablet) {
+                display: none;
+            }
+            @include breakpoint(mobile-all) {
+                display: none;
+            }
+        }
+        .bottom-shape {
+            background: #f3edef;
+            position: absolute;
+            bottom:-50px;
+            right:-50px;
+            height: 500px;
+            width: 90px;
+            @include breakpoint(desktop) {
+                right:-25px;
+            }
+            @include breakpoint(laptop) {
+                right:-25px;
+            }
+            @include breakpoint(tablet) {
+                display: none;
+            }         
+            @include breakpoint(mobile-all) {
+                display: none;
+            }   
+        }
+        img {
+            width: 100%;
+            position: relative;
+            z-index:10;
+            object-fit: cover;
+            @include breakpoint(mobile-all) {
+                height: 350px;
+            }
+        }
+    }
+}
+
+// Reviews
+#reviews {
+    padding-top: 120px;
+    padding-bottom: 240px;
+    background: $color-purple-light;
+    text-align: center;
+    @include breakpoint(laptop) {
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+    @include breakpoint(tablet) {
+        padding-top: 80px;
+        padding-bottom: 140px;
+    }
+    @include breakpoint(mobile-all) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    h3 {
+        @include small-title;
+        color:$white;
+    }
+    .icon {
+        width: 64px;
+        margin:0px auto;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    #reviews-slider {
+        .review-slide {
+            p {
+                color:$white;
+                font-size: 24px;
+                font-family: $font-italic;
+                line-height: 1.55;
+                @include breakpoint(laptop) {
+                    font-size: 20px;
+                }
+                @include breakpoint(tablet) {
+                    font-size: 20px;
+                }
+                @include breakpoint(mobile-all) {
+                    font-size: 20px;
+                }
+            }
+            span.author {
+                display: block;
+                text-transform: uppercase;
+                color:$white;
+                font-size: 20px;
+                padding-top: 15px;
+                @include breakpoint(mobile-all) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+// Contact us
+#contact-us {
+    margin-top: -150px;
+    padding-bottom: 200px;
+    @include breakpoint(laptop) {
+        padding-bottom: 150px;
+    }
+    @include breakpoint(tablet) {
+        margin-top: -100px;
+        padding-bottom: 80px;
+    }
+    @include breakpoint(mobile-all) {
+        margin-top: 0px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .contact-image {
+        position: relative;
+        .shape-left {
+            position: absolute;
+            bottom:-150px;
+            left:-300px;
+            @include breakpoint(laptop) {
+                left:-220px;
+                width: 250px;
+            }
+            @include breakpoint(tablet) {
+                display: none;
+            }
+            @include breakpoint(mobile-all) {
+                display: none;
+            }
+        }
+        .shape-right {
+            position: absolute;
+            top:-250px;
+            right:-400px;
+            @include breakpoint(desktop) {
+                right:-300px;
+            }
+            @include breakpoint(laptop) {
+                width: 250px;
+                right:-250px;
+            }
+            @include breakpoint(tablet) {
+                width: 200px;
+                right:-200px;
+                top:-100px;
+            }
+            @include breakpoint(mobile-all) {
+                display: none;
+            }
+        }
+        img.img-responsive {
+            width: 100%;
+            position: relative;
+            z-index:10;
+            object-fit: cover;
+            @include breakpoint(mobile-all) {
+                height: 350px;
+            }
+        }
+    }
+    .content-block {
+        margin-bottom: 150px;
+        padding-left: 15px;
+        @include breakpoint(laptop) {
+            margin-bottom: 50px;
+        }
+        @include breakpoint(tablet) {
+            margin-bottom: 70px;
+            padding-left: 0px;
+        }
+        @include breakpoint(mobile-all) {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding-left: 0px;
+            width: 100%;
+        }
+        p {
+            font-family: $font-italic;
+            @include breakpoint(laptop) {
+                font-size: 16px;
+            }
+            @include breakpoint(tablet) {
+                font-size: 16px;
+            }
+        }
+    }
+    .col-lg-3 {
+        display: flex;
+        align-items: flex-end;
+        @include breakpoint(mobile-all) {
+            display: block;
+        }
+    }
+    footer {
+        text-align: center;
+        padding-top: 80px;
+        @include breakpoint(laptop) {
+            padding-top: 60px;
+        }
+        @include breakpoint(tablet) {
+            padding-top: 50px;
+        }
+        @include breakpoint(mobile-all) {
+            padding-top: 30px;
+        }
+        a.btn-more {
+            @include btn-more;
+        }
+    }
+}
+
+// Bottom Featured
+#bottom-featured {
+    padding-bottom: 130px;
+    @include breakpoint(laptop) {
+        padding-bottom: 100px;
+    }
+    @include breakpoint(mobile-all) {
+        padding-bottom: 70px;
+    }
+    .feature-card {
+        position: relative;
+        overflow: hidden;
+        @include breakpoint(mobile-all) {
+            margin-bottom: 30px;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+            .card-caption {
+                bottom:30px;
+                box-shadow: 0px 0px 20px rgba($black, 0.3);
+                background: rgba($white, 1);
+            }
+        }
+        img {
+            @include animate-fade;
+        }
+        .card-caption {
+            @include centre(x);
+            width: 90%;
+            text-align: center;
+            bottom:20px;
+            background: rgba($white, 0.9);
+            padding-top: 50px;
+            padding-bottom: 40px;
+            @include animate-fade;
+            @include breakpoint(laptop) {
+                padding-top: 40px;
+                padding-bottom: 30px;
+            }
+            @include breakpoint(tablet) {
+                padding-top: 30px;
+                padding-bottom: 25px;
+            }
+            @include breakpoint(mobile-all) {
+                padding-top: 30px;
+                padding-bottom: 25px;
+            }
+            h3 {
+                text-transform: uppercase;
+                font-family: $font-heading;
+                font-size: 32px;
+                margin-bottom: 25px;
+                @include breakpoint(laptop) {
+                    font-size: 28px;
+                    margin-bottom: 20px;
+                }
+                @include breakpoint(tablet) {
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+                @include breakpoint(mobile-all) {
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+            }
+            a.btn-more {
+                @include btn-more--small;
+            }
+        }
+        img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            height: 580px;
+            @include breakpoint(desktop) {
+                height: 480px;
+            }
+            @include breakpoint(laptop) {
+                height: 400px;
+            }
+            @include breakpoint(tablet) {
+                height: 300px;
+            }
+            @include breakpoint(mobile-all) {
+                height: 400px;
+            }
+        }
+    }
+}

@@ -1,0 +1,159 @@
+/* Login CSS */
+/* Login CSS */
+body.login div#login form#loginform p.submit input#wp-submit {
+	background: #a5a3c1;
+	box-shadow:none;
+	border:1px solid #a5a3c1;
+	text-shadow: none;
+	color:#fff;
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 52px;
+	line-height: 52px;
+	margin-top: 20px;
+    border-radius:0px;
+    font-weight: bold;
+    font-size: 14px;
+	border-radius: 0px;
+}
+
+.wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {
+	background: #a5a3c1;
+	box-shadow:none;
+	border:1px solid #a5a3c1;
+	text-shadow: none;
+	text-transform: uppercase;
+	color:#fff;
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 52px;
+	line-height: 52px;
+	margin-top: 20px;
+    border-radius:0px;
+    font-weight: bold;
+    font-size: 14px;
+	border-radius: 0px;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover {
+	background: #736866;
+	border-color: #736866;
+	color:#fff;
+}
+
+.login #login_error, .login .message {
+	border-left:4px solid #1eab60;
+}
+
+.login #backtoblog a:hover, .login #nav a:hover {
+	color:#00245d;
+}
+
+.login #backtoblog a {
+	font-weight: bold;
+	color:#00245d;
+}
+
+.login #backtoblog a, .login #nav a {
+	font-weight: bold;
+	color:#a5a3c1;
+}
+
+.login #backtoblog a:hover , .login #nav a:hover {
+	color:#999;
+}
+
+.wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {
+	background: #a5a3c1;
+	box-shadow:none;
+	border:1px solid #a5a3c1;
+	text-shadow: none;
+	color:#fff;
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 52px;
+	line-height: 52px;
+	margin-top: 20px;
+    border-radius:0px;
+    font-weight: bold;
+    font-size: 14px;
+	border-radius: 0px;
+}
+
+.wp-core-ui .button-group.button-large .button:hover , .wp-core-ui .button.button-large:hover {
+	background: #736866;
+	border-color: #736866;
+	color:#fff;
+}
+
+body.login {
+	background: url('../img/bg/login-bg.png') no-repeat;
+	background-position: bottom left;
+	background-color: #fcf6f3;
+}
+
+#login {
+	padding-top: 3%!important;
+}
+
+.login form .forgetmenot label {
+	position: relative;
+	top:1px;
+	float:none;
+	text-transform: uppercase;
+}
+
+#nav {
+	text-align: center;
+}
+
+#backtoblog a {
+	text-align: center;
+	background:none;
+	display: block;
+	margin:0px;
+	padding:15px;
+	color:#000!important;
+}
+
+a.privacy-policy-link {
+	color:#a5a3c1;
+}
+
+#backtoblog a:hover {
+    color:#999!important;
+}
+
+.login #backtoblog, .login #nav {
+	padding:0px;
+}
+
+.login form {
+	border:1px solid #f0ede9;
+	background: #fff;
+    border-radius:0px;
+
+}
+
+.login h1 a {
+	margin-bottom: 0px !important;
+}
+
+.login form .input, .login input[type=password], .login input[type=text] {
+	height: 60px;
+	line-height: 60px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border:1px solid #000000!important;
+	border:none;
+	padding-left: 20px;
+	border-radius: 0px;
+}
+
+.login label {
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}

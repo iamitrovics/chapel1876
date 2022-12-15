@@ -1,0 +1,177 @@
+// mobile menu
+
+.menu-overlay {
+    background: rgba(255,255,255,0.8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;	
+}
+
+.active-overlay {
+	opacity: 1;
+    visibility: visible;	
+}
+
+.main-menu-sidebar {
+	background: $color-purple;
+	width:310px;
+	position:fixed;
+	height:100%;
+	top:0px;
+	right:-310px;
+	z-index:99999;
+	transition:.45s ease-in-out;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 30px;
+    overflow-y:scroll;
+    /* close menu */
+    header {
+        position: relative;
+    }
+    .close-menu-btn {
+        position: absolute;
+        top:15px;
+        right:0px;
+        color:$white;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius:100%;
+        i {
+            @include centre(both);
+            color:$white;
+        }
+    }
+    // arrow
+    small {
+        display:block;
+        width:50px;
+        height:54px;
+        position: absolute;
+        top:0px;
+        right:0px;     
+        &:after {
+            content:'+';
+            color:$white;
+            font-size: 22px!important;
+            font-weight: 300;
+            @include centre(both);
+        }
+        &.active {
+            &:after {
+                color:$white;
+                @include animate-fade;
+                @include centre(both);
+                content:'-';
+            }						
+        }          
+    }
+	/* main menu */
+	#sidebar-menu-wrapper {
+		#menu {
+			.nav-links {
+                list-style: none;
+                padding-top: 100px;
+                .menu-item-has-children {
+                    position: relative;
+                }
+				> li > a {
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    font-size: 1.1em;
+                    color:$white;
+                    position: relative;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    display: block;
+                    border-bottom:1px solid rgba($white,0.1);
+					&:hover {
+                        color:$white;
+					}
+				}
+                > li {
+                    &:last-child {
+                        margin-top: 20px;
+                        a {
+                            background: $color-purple-dark;
+                            text-align: center;
+                            bordeR:none;
+                            padding-top: 20px;
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+				li {
+                    padding-left: 0px;
+                    &:before {
+                        display: none;
+                    } 
+					ul {
+						padding-top: 10px;
+						padding-bottom: 10px;
+						li {
+                            padding-left: 0px;
+                            &:before {
+                                display: none;
+                            }                            
+							a {
+								display: block;
+								font-size: 1em;
+								color:#5d5d5d;
+								padding-top: 8px;
+								padding-bottom: 8px;
+								padding-left: 20px;
+								position: relative;
+								color:$white;
+								opacity: 0.7;
+								line-height: 1.3;
+                                letter-spacing: 1px;
+                                text-transform: uppercase;
+								&:hover {
+									color:$white;
+									padding-left: 20px;
+									&:before {
+										width: 10px;
+									}
+								}
+								&:before {
+									content:'';
+									width: 5px;
+									height: 5px;
+									background:$white;
+									opacity: 0.7;
+									@include centre(y);
+									left:0px;
+									border-radius:100%;
+									@include animate-fade;
+								}
+							}
+						}
+					}
+				}
+				.has-menu > a {
+					position:relative;
+				}
+			}
+		}
+
+	}
+}
+
+
+.body-scroll {
+	overflow-y:hidden!important;
+}
+
+.menu-active {
+	right: 0;
+}
